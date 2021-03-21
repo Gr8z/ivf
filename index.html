@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>IVF</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" id="metaViewport" content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover" data-tdv-general-scale="0.53"/>
-    <link rel="preload" href="locale/en.txt?v=1616363805544" as="fetch" crossorigin="anonymous"/>
-	<link rel="preload" href="script.js?v=1616363805544" as="script"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/r/3/0_0.jpg?v=1616363805544" as="image"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/l/3/0_0.jpg?v=1616363805544" as="image"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/u/3/0_0.jpg?v=1616363805544" as="image"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/d/3/0_0.jpg?v=1616363805544" as="image"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/f/3/0_0.jpg?v=1616363805544" as="image"/>
-	<link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/b/3/0_0.jpg?v=1616363805544" as="image"/>
-	<meta name="description" content="Virtual Tour"/>
-	<meta name="theme-color" content="#FFFFFF"/>
+    <meta name="viewport" id="metaViewport"
+        content="user-scalable=no, initial-scale=1, width=device-width, viewport-fit=cover"
+        data-tdv-general-scale="0.53" />
+    <link rel="preload" href="locale/en.txt?v=1616363805544" as="fetch" crossorigin="anonymous" />
+    <link rel="preload" href="script.js?v=1616363805544" as="script" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/r/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/l/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/u/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/d/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/f/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <link rel="preload" href="media/panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9_0/b/3/0_0.jpg?v=1616363805544"
+        as="image" />
+    <meta name="description" content="Virtual Tour" />
+    <meta name="theme-color" content="#FFFFFF" />
     <script src="lib/tdvplayer.js?v=1616363805544"></script>
     <script src="script.js?v=1616363805544"></script>
     <script type="text/javascript">
         var tour;
-        var devicesUrl = {"general":"script_general.js?v=1616363805544"};
+        var devicesUrl = { "general": "script_general.js?v=1616363805544" };
 
-        (function()
-        {
+        (function () {
             var deviceType = ['general'];
-            if(TDV.PlayerAPI.mobile)
+            if (TDV.PlayerAPI.mobile)
                 deviceType.unshift('mobile');
-            if(TDV.PlayerAPI.device == TDV.PlayerAPI.DEVICE_IPAD)
+            if (TDV.PlayerAPI.device == TDV.PlayerAPI.DEVICE_IPAD)
                 deviceType.unshift('ipad');
             var url;
-            for(var i=0; i<deviceType.length; ++i) {
+            for (var i = 0; i < deviceType.length; ++i) {
                 var d = deviceType[i];
-                if(d in devicesUrl) {
+                if (d in devicesUrl) {
                     url = devicesUrl[d];
                     break;
                 }
             }
-            if(typeof url == "object") {
+            if (typeof url == "object") {
                 var orient = TDV.PlayerAPI.getOrientation();
-                if(orient in url) {
+                if (orient in url) {
                     url = url[orient];
                 }
             }
@@ -49,9 +57,8 @@
             el.parentNode.insertBefore(link, el);
         })();
 
-        function loadTour()
-        {
-            if(tour) return;
+        function loadTour() {
+            if (tour) return;
 
             var settings = new TDV.PlayerSettings();
             settings.set(TDV.PlayerSettings.CONTAINER, document.getElementById('viewer'));
@@ -66,99 +73,86 @@
             tour.load();
         }
 
-        function pauseTour()
-        {
-            if(!tour)
+        function pauseTour() {
+            if (!tour)
                 return;
 
             tour.pause();
         }
 
-        function resumeTour()
-        {
-            if(!tour)
+        function resumeTour() {
+            if (!tour)
                 return;
 
             tour.resume();
         }
 
-        function onVirtualTourInit()
-        {
-            var updateTexts = function() {
+        function onVirtualTourInit() {
+            var updateTexts = function () {
                 document.title = this.trans("tour.name")
             };
 
             tour.locManager.bind(TDV.Tour.LocaleManager.EVENT_LOCALE_CHANGED, updateTexts.bind(tour.locManager));
-            
+
             if (tour.player.cookiesEnabled)
                 enableCookies();
             else
                 tour.player.bind('enableCookies', enableCookies);
         }
 
-        function onVirtualTourLoaded()
-        {
+        function onVirtualTourLoaded() {
             disposePreloader();
         }
 
-        function onVirtualTourEnded()
-        {
+        function onVirtualTourEnded() {
 
         }
 
-        function enableCookies()
-        {
-            
+        function enableCookies() {
+
         }
 
         function setMediaByIndex(index) {
-            if(!tour)
+            if (!tour)
                 return;
 
             tour.setMediaByIndex(index);
         }
 
-        function setMediaByName(name)
-        {
-            if(!tour)
+        function setMediaByName(name) {
+            if (!tour)
                 return;
 
             tour.setMediaByName(name);
         }
 
-        function showPreloader()
-        {
+        function showPreloader() {
             var preloadContainer = document.getElementById('preloadContainer');
-            if(preloadContainer != undefined)
+            if (preloadContainer != undefined)
                 preloadContainer.style.opacity = 1;
         }
 
-        function disposePreloader()
-        {
+        function disposePreloader() {
             var preloadContainer = document.getElementById('preloadContainer');
-            if(preloadContainer == undefined)
+            if (preloadContainer == undefined)
                 return;
 
             var transitionEndName = transitionEndEventName();
-            if(transitionEndName)
-            {
+            if (transitionEndName) {
                 preloadContainer.addEventListener(transitionEndName, hide, false);
                 preloadContainer.style.opacity = 0;
                 setTimeout(hide, 500); //Force hide. Some cases the transitionend event isn't dispatched with an iFrame.
             }
-            else
-            {
+            else {
                 hide();
             }
 
-            function hide()
-            {
-                
+            function hide() {
+
                 preloadContainer.style.visibility = 'hidden';
                 preloadContainer.style.display = 'none';
                 var videoList = preloadContainer.getElementsByTagName("video");
-                for(var i=0; i<videoList.length; ++i)
-                {
+                for (var i = 0; i < videoList.length; ++i) {
                     var video = videoList[i];
                     video.pause();
                     while (video.children.length)
@@ -166,14 +160,14 @@
                 }
             }
 
-            function transitionEndEventName () {
+            function transitionEndEventName() {
                 var el = document.createElement('div');
                 var transitions = {
-                        'transition':'transitionend',
-                        'OTransition':'otransitionend',
-                        'MozTransition':'transitionend',
-                        'WebkitTransition':'webkitTransitionEnd'
-                    };
+                    'transition': 'transitionend',
+                    'OTransition': 'otransitionend',
+                    'MozTransition': 'transitionend',
+                    'WebkitTransition': 'webkitTransitionEnd'
+                };
 
                 var t;
                 for (t in transitions) {
@@ -186,32 +180,25 @@
             }
         }
 
-        function onBodyClick(){
+        function onBodyClick() {
             document.body.removeEventListener("click", onBodyClick);
             document.body.removeEventListener("touchend", onBodyClick);
-            
+
         }
 
         function onLoad() {
-            if (/AppleWebKit/.test(navigator.userAgent) && /Mobile\/\w+/.test(navigator.userAgent))
-            {
+            if (/AppleWebKit/.test(navigator.userAgent) && /Mobile\/\w+/.test(navigator.userAgent)) {
                 var inIFrame = false;
-                try
-                {
+                try {
                     inIFrame = (window.self !== window.top);
                 }
-                catch (e)
-                {
+                catch (e) {
                     inIFrame = true;
                 }
-                if (!inIFrame)
-                {
-                    var onResize = function(async)
-                    {
-                        [0, 250, 1000, 2000].forEach(function(delay)
-                        {
-                            setTimeout(function()
-                            {
+                if (!inIFrame) {
+                    var onResize = function (async) {
+                        [0, 250, 1000, 2000].forEach(function (delay) {
+                            setTimeout(function () {
                                 var viewer = document.querySelector('#viewer');
                                 var scale = window.innerWidth / document.documentElement.clientWidth;
                                 var width = document.documentElement.clientWidth;
@@ -221,12 +208,11 @@
                                 viewer.style.left = Math.round((window.innerWidth - width) * 0.5) + 'px';
                                 viewer.style.top = Math.round((window.innerHeight - height) * 0.5) + 'px';
                                 viewer.style.transform = 'scale(' + scale + ', ' + scale + ')';
-                                window.scrollTo(0,0);
+                                window.scrollTo(0, 0);
                             }, delay);
                         });
                     };
-                    var onTouchEnd = function()
-                    {
+                    var onTouchEnd = function () {
                         document.body.removeEventListener("touchend", onTouchEnd);
                         clearInterval(resizeIntervalId);
                         onResize();
@@ -241,21 +227,20 @@
             }
 
             var params = getParams(location.search.substr(1));
-            if(params.hasOwnProperty("skip-loading"))
-            {
+            if (params.hasOwnProperty("skip-loading")) {
                 loadTour();
                 disposePreloader();
                 return;
             }
 
-            if (isOVRWeb()){
+            if (isOVRWeb()) {
                 showPreloader();
                 loadTour();
                 return;
             }
 
             showPreloader();
-			loadTour();
+            loadTour();
         }
 
         function playVideo(video) {
@@ -263,20 +248,19 @@
                 return /^((?!chrome|android|crios|ipad|iphone).)*safari/i.test(navigator.userAgent) && parseFloat(/Version\/([0-9]+\.[0-9]+)/i.exec(navigator.userAgent)[1]) >= 11;
             }
 
-            function hasAudio (video) {
+            function hasAudio(video) {
                 return video.mozHasAudio ||
-                       Boolean(video.webkitAudioDecodedByteCount) ||
-                       Boolean(video.audioTracks && video.audioTracks.length);
+                    Boolean(video.webkitAudioDecodedByteCount) ||
+                    Boolean(video.audioTracks && video.audioTracks.length);
             }
 
             function detectUserAction() {
-                var onVideoClick = function(e) {
-                    if(video.paused) {
+                var onVideoClick = function (e) {
+                    if (video.paused) {
                         video.play();
                     }
                     video.muted = false;
-                    if(hasAudio(video))
-                    {
+                    if (hasAudio(video)) {
                         e.stopPropagation();
                         e.stopImmediatePropagation();
                         e.preventDefault();
@@ -296,7 +280,7 @@
                 var canPlay = true;
                 var promise = video.play();
                 if (promise) {
-                    promise.catch(function() {
+                    promise.catch(function () {
                         video.muted = true;
                         video.play();
                         detectUserAction();
@@ -311,27 +295,66 @@
             }
         }
 
-        function isOVRWeb(){
+        function isOVRWeb() {
             return window.location.hash.substring(1).split('&').indexOf('ovrweb') > -1;
         }
 
         function getParams(params) {
-            var queryDict = {}; params.split("&").forEach(function(item) {var k = item.split("=")[0], v = decodeURIComponent(item.split("=")[1]);queryDict[k.toLowerCase()] = v});
+            var queryDict = {}; params.split("&").forEach(function (item) { var k = item.split("=")[0], v = decodeURIComponent(item.split("=")[1]); queryDict[k.toLowerCase()] = v });
             return queryDict;
         }
 
         document.addEventListener('DOMContentLoaded', onLoad);
     </script>
     <style type="text/css">
-        html, body { width: 100%; height: 100%; margin: 0; padding: 0; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        }
 
-        #viewer { z-index:1; position:absolute; width: 100%; height: 100%; top: 0; }
-        #preloadContainer { z-index:2; position:relative; width:100%; height:100%; opacity:0; background-color:rgba(255,255,255,1); transition: opacity 0.5s; -webkit-transition: opacity 0.5s; -moz-transition: opacity 0.5s; -o-transition: opacity 0.5s;}
+        #viewer {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+
+        #preloadContainer {
+            z-index: 2;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background-color: rgba(255, 255, 255, 1);
+            transition: opacity 0.5s;
+            -webkit-transition: opacity 0.5s;
+            -moz-transition: opacity 0.5s;
+            -o-transition: opacity 0.5s;
+        }
+
+        body>ul>li:nth-last-child(-n + 2) {
+            display: none;
+        }
     </style>
-    
+
 </head>
+
 <body>
-    <div id="preloadContainer"><div style="z-index: 4; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%"><div style="text-align:left; color:#000; "><DIV STYLE="text-align:center;font-size:1.6666666666666663vmin;"><SPAN STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-size:1.67vmin;font-family:Arial, Helvetica, sans-serif;">Loading virtual tour. Please wait...</SPAN></DIV></div></div></div>
+    <div id="preloadContainer">
+        <div style="z-index: 4; position: absolute; left: 0%; top: 50%; width: 100.00%; height: 10.00%">
+            <div style="text-align:left; color:#000; ">
+                <DIV STYLE="text-align:center;font-size:1.6666666666666663vmin;"><SPAN
+                        STYLE="display:inline-block; letter-spacing:0vmin; white-space:pre-wrap;color:#777777;font-size:1.67vmin;font-family:Arial, Helvetica, sans-serif;">Loading
+                        virtual tour. Please wait...</SPAN></DIV>
+            </div>
+        </div>
+    </div>
     <div id="viewer"></div>
 </body>
+
 </html>
