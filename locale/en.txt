@@ -1,0 +1,37 @@
+#: locale=en
+
+## Tour
+
+### Description
+
+### Title
+tour.name = IVF
+
+## Media
+
+### Title
+panorama_0021E6D1_14EA_80C6_4194_8BF522BA5E79.label = Religous Impacts
+panorama_00F95CE7_14F7_80CA_419B_BB6F0F46ACB2.label = Social Impacts
+panorama_014E643D_14FB_87BE_41A6_25EDB5724C22.label = Ethical Impacts
+panorama_D18EBEE4_DDEB_9A12_41BC_3E9DC3E40EA9.label = Entry
+panorama_D693F5F8_DDEF_89F3_41A4_E4430BF187C6.label = About IVF
+panorama_D7DEC10D_DDE9_862D_41D3_DB279C4F4B86.label = Main Room 
+panorama_E73CC557_F705_070D_41DB_1159FF50812D.label = ADV & DISADV
+photo_E6CCECB0_F703_0503_41E1_6F398D2F9E36.label = 48-488614_drag-to-move-the-mouse-pointer-and-tap
+video_2C53C25E_3133_8230_417C_66FC905315FB.label = boctec
+video_382C305F_332E_FE2F_41A6_70162BB409BA.label = ivf intro
+
+## Popup
+
+### Body
+htmlText_268FE3EE_333E_8210_41AE_1CDF614BBCFB.html = <div style="text-align:left; color:#000; "><HTML><BODY><DIV STYLE="text-align:center;font-size:36px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:36px;"><B><U>Click And Drag To Navigate</U></B></SPAN></SPAN></DIV><DIV STYLE="text-align:center;font-size:36px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:36px;"><B><U/></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>Let's start our journey!!!</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Click on the man for more information IVF </B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Click on the women for information on biotechnologies.</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Or simply click on the arrow and start exploring.</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B/></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>ENJOY!</B></SPAN></SPAN></DIV></BODY></HTML></div>
+htmlText_E3360FD5_F73D_0302_41E5_8C854A9226AC.html = <div style="text-align:left; color:#000; "><HTML><BODY><DIV STYLE="text-align:center;font-size:36px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:36px;"><B><U>Click And Drag To Navigate</U></B></SPAN></SPAN></DIV><DIV STYLE="text-align:center;font-size:36px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:36px;"><B><U/></B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>Let's start our journey!!!</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Click on the man for more information IVF </B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Click on the women for information on biotechnologies.</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>-Or simply click on the arrow and start exploring.</B></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B/></SPAN></SPAN></DIV><DIV STYLE="text-align:left;font-size:18px;"><SPAN STYLE="display:inline-block; letter-spacing:0px; white-space:pre-wrap;color:#000000;font-family:Arial, Helvetica, sans-serif;"><SPAN STYLE="font-size:18px;"><B>ENJOY!</B></SPAN></SPAN></DIV></BODY></HTML></div>
+
+### Title
+window_24872581_3333_8610_4191_788898EA9041.title = Welcome To Our Hospital 
+window_268E43EE_333E_8210_4182_78E0EE1B11AA.title = Welcome to our hospital
+
+## Action
+
+### URL
+LinkBehaviour_24B1115C_3335_FE30_41BC_7133E4774D78.source = https://www.bing.com/videos/search?q=case+study+of+ivf+for+same+sex+couple&&view=detail&mid=3DEBD1957FF410E360533DEBD1957FF410E36053&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Dcase%2Bstudy%2Bof%2Bivf%2Bfor%2Bsame%2Bsex%2Bcouple%26FORM%3DHDRSC3
