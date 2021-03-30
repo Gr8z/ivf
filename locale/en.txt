@@ -17,6 +17,7 @@ panorama_7E4E4662_77E9_45B2_41CA_64A1B8D45D3E.label = Religious Impact
 panorama_7E5513DE_77EB_C292_41BB_B27077E82EB1.label = Social Impact
 panorama_7E55935B_77EB_4392_41CB_230DE8882DAB.label = Ethical Impact
 panorama_7E55A94B_77EB_4FF2_41D0_2E9C68A28872.label = About IVF
+panorama_9091F8D0_80DA_8890_41A7_18C43F32EAB8.label = References
 video_5D0E1DCD_785A_C6F6_41CD_1C24B71F1FC4.label = video intro
 video_626523CB_786A_C2F1_41D9_F29FD8C4D70E.label = final biotech
 video_6F3BA879_7827_CD9E_41DD_379FBBBD8299.label = intro video final
